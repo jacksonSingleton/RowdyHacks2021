@@ -1,6 +1,9 @@
 import * as PIXI from "pixi.js";
-require("./Particle.js");
+require("./avadaKadevra.js");
 
+// This is some extra shit that ties into
+// other projects
+/*
 const app = new PIXI.Application({
     width: 1280,
     height: 720,
@@ -56,4 +59,4 @@ new ParticleExample(
 	},
 	"addAtBack": false,
 	"spawnType": "point"
-})
+})*/
