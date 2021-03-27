@@ -15,13 +15,13 @@ new ParticleExample(
 		"end": 0.11
 	},
 	"scale": {
-		"start": 0.15,
-		"end": 0.6,
+		"start": 0.4,
+		"end": 0.2,
 		"minimumScaleMultiplier": 3
 	},
 	"color": {
 		"start": "#fade6c",
-		"end": "#eb5905"
+		"end": "#eb2305"
 	},
 	"speed": {
 		"start": 250,
