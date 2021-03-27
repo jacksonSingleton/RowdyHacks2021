@@ -15,13 +15,13 @@ new ParticleExample(
 		"end": 0.11
 	},
 	"scale": {
-		"start": 0.4,
-		"end": 0.2,
+		"start": 0.1,
+		"end": 0.6,
 		"minimumScaleMultiplier": 3
 	},
 	"color": {
 		"start": "#fade6c",
-		"end": "#eb2305"
+		"end": "#d94d1f"
 	},
 	"speed": {
 		"start": 250,
@@ -46,7 +46,7 @@ new ParticleExample(
 		"min": 0.28,
 		"max": 0.9
 	},
-	"blendMode": "normal",
+	"blendMode": "add",
 	"frequency": 0.001,
 	"emitterLifetime": -1,
 	"maxParticles": 500,
