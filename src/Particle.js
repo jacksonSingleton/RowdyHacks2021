@@ -176,7 +176,7 @@ import * as particles from "pixi-particles"
                 this.emitter.updateOwnerPos(window.innerWidth / 2, window.innerHeight / 2);
 
                 // Click on the canvas to trigger
-                canvas.addEventListener('mouseup', (e) =>
+                canvas.addEventListener('mousemove', (e) =>
                 {
                     if (!this.emitter) return;
 
