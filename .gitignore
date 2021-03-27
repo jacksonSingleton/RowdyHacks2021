@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7466d5983be4be729c759df4b6637fb00e37e8fa
 ###Test Html###
 test.html
 
@@ -11,6 +14,11 @@ test.html
 !.vscode/extensions.json
 *.code-workspace
 
+<<<<<<< HEAD
+=======
+### IntelliJ ###
+.idea*
+>>>>>>> 7466d5983be4be729c759df4b6637fb00e37e8fa
 
 ### Node ###
 # Logs
