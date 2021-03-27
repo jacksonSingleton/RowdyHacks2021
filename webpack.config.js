@@ -8,7 +8,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Pixi.js Demo'
+      template: "public/index.html"
     }),
     new CopyPlugin({
         patterns: [
@@ -19,5 +19,12 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
-  }
+  },
+  module:{
+        rules:[{
+            loader: 'babel-loader',
+            test: /\.js|\.jsx$/,
+            exclude: /node_modules/
+        }]
+      }
 };
