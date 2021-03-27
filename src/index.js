@@ -1,15 +1,14 @@
 import * as PIXI from "pixi.js";
-import * as particles from "pixi-particles";
+require("./Particle.js");
 
 const app = new PIXI.Application({
     width: 1280,
     height: 720,
-    transparent: true
+    transparent: false
 });
 document.body.appendChild(app.view);
-let container = new PIXI.Container();
-var emitter = new particles.Emitter(
-   container,
+new ParticleExample(
+	["./assets/particle.png"],
 {
 	"alpha": {
 		"start": 0.68,
@@ -58,29 +57,3 @@ var emitter = new particles.Emitter(
 	"addAtBack": false,
 	"spawnType": "point"
 })
-
-// Calculate the current time
-var elapsed = Date.now();
-
-// Update function every frame
-var update = function(){
-
-    // Update the next frame
-    requestAnimationFrame(update);
-
-    var now = Date.now();
-
-    // The emitter requires the elapsed
-    // number of seconds since the last update
-    emitter.update((now - elapsed) * 0.001);
-    elapsed = now;
-
-    // Should re-render the PIXI Stage
-    // renderer.render(stage);
-};
-
-// Start emitting
-emitter.emit = true;
-
-// Start the update
-update();
