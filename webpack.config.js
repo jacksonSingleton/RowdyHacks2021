@@ -8,7 +8,6 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Pixi.js Demo',
       template: "public/index.html"
     }),
     new CopyPlugin({
