@@ -12,7 +12,7 @@ export default class Homepage extends React.Component{
             <div>
                 <h1>Hello World!</h1>
                 <div className="card">
-                    <img></img>
+                    <img src="https://source.unsplash.com/random"></img>
                     <h1>Magic Spell Name</h1>
                     <p>Description for magic spell</p>
                 </div>
