@@ -60,7 +60,7 @@ class App {
         /**
          * Cubic interpolation based on https://github.com/osuushi/Smooth.js
          */
-        function clipInputgit a(k, arr) {
+        function clipInput(k, arr) {
             if (k < 0) k = 0;
             if (k > arr.length - 1) k = arr.length - 1;
             return arr[k];
