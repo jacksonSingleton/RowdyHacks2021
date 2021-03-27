@@ -1,5 +1,4 @@
 import * as PIXI from "pixi.js";
-<<<<<<< HEAD
 require("./avadaKadevra.js");
 
 // This is some extra shit that ties into
@@ -61,7 +60,6 @@ new ParticleExample(
 	"addAtBack": false,
 	"spawnType": "point"
 })*/
-=======
 
 
 const app = new PIXI.Application({width: 1280, height: 720});
@@ -102,4 +100,3 @@ function setup(loader, resources) {
         focus.position.y = event.data.global.y - focus.height / 2;
     }
 }
->>>>>>> 7466d5983be4be729c759df4b6637fb00e37e8fa
