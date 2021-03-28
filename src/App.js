@@ -1,6 +1,7 @@
 //ENTRYPOINT FOR THE PROGRAM THAT WILL BE BUNDLED INTO OUR MAIN WEBPAGE
 import React from "react";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import process from "process";
 // Pages
 import Homepage from "./pages/Homepage";
 import AvadaKadevera from './pages/AvadaKadevera';
@@ -21,7 +22,7 @@ function App() {
         <Router>
                 <Navigation />
                     <Switch>
-                        <Route path='/' exact component={Homepage} />
+                        <Route path={process.env.PUBLIC_URL + '/' } exact component={Homepage} />
                         <Route path="/avadakadevera" exact component={AvadaKadevera} />
                         <Route path="/incindio" exact component={Incindio} />
                         <Route path="/lumos" exact component={Lumos} />
