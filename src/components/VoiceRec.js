@@ -1,22 +1,27 @@
-// New speech recognition object
-var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
-var recognition = new SpeechRecognition();
+function listenToUser(phrase){
 
-// This runs when the speech recognition service starts
-recognition.onstart = function() {
-    console.log("Voice Recognition listening. Speak into the microphone.");
-};
+    // New speech recognition object
+    var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+    var recognition = new SpeechRecognition();
 
-recognition.onspeechend = function() {
-    // Stop when user is done speaking
-    recognition.stop();
+    // This runs when the speech recognition service starts
+    recognition.onstart = function() {
+        console.log("Voice Recognition listening. Speak into the microphone.");
+    };
+
+    recognition.onspeechend = function() {
+        // Stop when user is done speaking
+        recognition.stop();
+    }
+
+    // This runs when the speech recognition service returns result
+    recognition.onresult = function(event) {
+        var transcript = event.results[0][0].transcript;
+        var confidence = event.results[0][0].confidence;
+    };
+
+    // start recognition
+    recognition.start();
+    if (phrase.toLowerCase() == transcript.toLowerCase() && confidence > 30) return true; 
+    return false;
 }
-
-// This runs when the speech recognition service returns result
-recognition.onresult = function(event) {
-    var transcript = event.results[0][0].transcript;
-    var confidence = event.results[0][0].confidence;
-};
-
-// start recognition
-recognition.start();
