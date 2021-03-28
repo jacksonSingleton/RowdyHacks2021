@@ -44,3 +44,5 @@ Custom backgrounds made by Jackson!
 Easter Eggs made by Jackson!
 
 Cool Effects made by Jackson!
+
+[![forthebadge](https://forthebadge.com/images/badges/works-on-my-machine.svg)](https://forthebadge.com)
