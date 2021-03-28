@@ -16,6 +16,18 @@ var radius = 0;
 const blurSize = 56;
 
 app.loader.add('room', '/src/assets/lumosBG.png');
+app.loader.add('roomb', '/src/assets/lumosblackBG.png');
+app.loader.load(setupOne);
+function setupOne(loader, resources) {
+    const background = new PIXI.Sprite(resources.roomb.texture);
+    app.stage.addChild(background);
+    background.width = app.screen.width;
+    background.height = app.screen.height;
+
+    app.stage.interactive = true;
+
+}
+
 app.loader.load(setup);
 
 function setup(loader, resources) {
@@ -88,7 +100,7 @@ function listenToUser(phrase){
         if (('Knox' === transcript) == true) {
             app.stage.removeChild(focus);
             update(0);
-            
+            app.loader.load(setupOne);
             console.log("video played");
         }
     };
