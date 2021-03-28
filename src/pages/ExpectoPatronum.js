@@ -1,7 +1,8 @@
 import React from 'react';
 import * as PIXI from "pixi.js";
+import "../components/VoiceRec.js";
 
-const app = new PIXI.Application({ transparent: true });
+const app = new PIXI.Application({ backgroundAlpha: true });
 app.loader.add('room', '/src/assets/lumosBG.png');
 app.loader.load(setup);
 function setup(loader, resources) {
@@ -9,8 +10,6 @@ function setup(loader, resources) {
     app.stage.addChild(background);
     background.width = app.screen.width;
     background.height = app.screen.height;
-
-    app.stage.addChild(focus);
 
     app.stage.interactive = true;
 
@@ -26,7 +25,7 @@ const button = new PIXI.Graphics()
     .drawRoundedRect(0, 0, 100, 100, 10)
     .endFill()
     .beginFill(0xffffff)
-    .moveTo(36, 30)
+    .moveTo(100, 30)
     .lineTo(36, 70)
     .lineTo(70, 50);
 
