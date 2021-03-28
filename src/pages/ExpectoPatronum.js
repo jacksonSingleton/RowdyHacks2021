@@ -2,8 +2,24 @@ import React from 'react';
 import * as PIXI from "pixi.js";
 
 const app = new PIXI.Application({ transparent: true });
+app.loader.add('room', '/src/assets/lumosBG.png');
+app.loader.load(setup);
+function setup(loader, resources) {
+    const background = new PIXI.Sprite(resources.room.texture);
+    app.stage.addChild(background);
+    background.width = app.screen.width;
+    background.height = app.screen.height;
 
+    app.stage.addChild(focus);
 
+    app.stage.interactive = true;
+
+}
+function play() {
+    
+    var audio = new Audio('../assets/PatronusSound.wav');
+    audio.play();
+  }
 // Create play button that can be used to trigger the video
 const button = new PIXI.Graphics()
     .beginFill(0x0, 0.5)
@@ -37,7 +53,7 @@ button.on('pointertap', onPlayVideo);
 function onPlayVideo() {
     // Don't need the button anymore
     button.destroy();
-
+    play();
     // create a video texture from a path
     const texture = PIXI.Texture.from('../assets/patronus.mp4');
 
@@ -49,6 +65,8 @@ function onPlayVideo() {
     videoSprite.height = app.screen.height;
 
     app.stage.addChild(videoSprite);
+
+    
 }
 
 const ExpectoPatronum = () => {
