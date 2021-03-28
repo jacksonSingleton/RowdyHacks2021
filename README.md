@@ -1,6 +1,8 @@
 # RowdyHack 2021
 # Strixhaven : School of Mages Classroom
+[![forthebadge](https://forthebadge.com/images/badges/made-with-crayons.svg)](https://forthebadge.com)
 
+Message #code-snippets
 ### Team Members
 Jackson Singleton
 
