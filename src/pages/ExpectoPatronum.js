@@ -39,7 +39,7 @@ function listenToUser(phrase){
 }
 
 
-const app = new PIXI.Application({ backgroundAlpha: true });
+const app = new PIXI.Application({ width: 1280, height: 720, backgroundAlpha: true });
 app.loader.add('room', '/src/assets/lumosBG.png');
 app.loader.load(setup);
 function setup(loader, resources) {

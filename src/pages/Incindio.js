@@ -3,6 +3,8 @@ import * as PIXI from "pixi.js";
 require("../spells/Particle.js");
 
 const app = new PIXI.Application({
+    width: 1280,
+    height: 720,
     backgroundAlpha: false
 });
 

@@ -19,7 +19,6 @@ const Navbar = () => {
                 <MenuLink href="/incindio">Incindio</MenuLink>
                 <MenuLink href="/avadakadevera">Avada Kadevera</MenuLink>
                 <MenuLink href="/expectopatronum">Expecto Patronum</MenuLink>
-                <MenuLink href="/sandbox">Sandbox</MenuLink>
             </Menu>
         </Nav>
     );
