@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react'
+
+import ReactDOM from 'react-dom'
 import * as PIXI from "pixi.js";
 var ret = false;
 
-function listenToUser(phrase){
+const ExpectoPatronum = () =>{
+    function listenToUser(phrase){
     var transcript = "";
     var confidence = "";
     // New speech recognition object
@@ -105,12 +108,13 @@ function onPlayVideo() {
 
     app.stage.addChild(videoSprite);
 
-}
-
-const ExpectoPatronum = () => {
-    return (
-        document.body.appendChild(app.view)
-    );
+    
 };
+      
+    return (
+            <div>
+            </div>    
+            );
+}
 
 export default ExpectoPatronum;

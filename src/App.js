@@ -12,6 +12,7 @@ import ExpectoPatronum from './pages/ExpectoPatronum';
 // Components
 import Navigation from "./components/navbar";
 import Footer from "./components/footer";
+import TestPage from "./pages/TestPage";
 // Styling
 import './styles/index.css';
 
@@ -20,15 +21,16 @@ function App() {
     return (
         <Router>
                 <Navigation />
-                    <Switch>
-                        <Route path="/" exact component={Homepage} />
-                        <Route path="/avadakadevera" component={AvadaKadevera} />
-                        <Route path="/incindio" component={Incindio} />
-                        <Route path="/lumos" component={Lumos} />
-                        <Route path="/sandbox" component={Sandbox} />
-                        <Route path="/wingardiumleviosa" component={WingardiumLeviosa} />
-                        <Route path="/expectopatronum" component={ExpectoPatronum} />
-                    </Switch>
+                <Switch>
+                    <Route path="/" exact component={Homepage} />
+                    <Route path="/avadakadevera" component={AvadaKadevera} />
+                    <Route path="/test" component={TestPage} />
+                    <Route path="/incindio" component={Incindio} />
+                    <Route path="/lumos" component={Lumos} />
+                    <Route path="/sandbox" component={Sandbox} />
+                    <Route path="/wingardiumleviosa" component={WingardiumLeviosa} />
+                    <Route path="/expectopatronum" component={ExpectoPatronum} />
+                </Switch>
             <Footer />
         </Router>
     );
