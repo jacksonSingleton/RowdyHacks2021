@@ -1,3 +1,4 @@
+//ENTRYPOINT FOR THE PPROGRAM THAT WILL BE BUNDLED INTO OUR MAIN WEBPAGE
 import React from "react";
 import ReactDOM from "react-dom";
 import Homepage from "./Homepage";
