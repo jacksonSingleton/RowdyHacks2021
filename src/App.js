@@ -8,11 +8,13 @@ import Incindio from './pages/Incindio';
 import Lumos from './pages/Lumos';
 import Sandbox from './pages/Sandbox';
 import WingardiumLeviosa from './pages/WingardiumLeviosa';
+import ExpectoPatronum from './pages/ExpectoPatronum';
 // Components
 import Navigation from "./components/navbar";
 import Footer from "./components/footer";
 // Styling
 import './styles/index.css';
+
 
 function App() {
     return (
@@ -25,8 +27,8 @@ function App() {
                         <Route path="/lumos" component={Lumos} />
                         <Route path="/sandbox" component={Sandbox} />
                         <Route path="/wingardiumleviosa" component={WingardiumLeviosa} />
+                        <Route path="/expectopatronum" component={ExpectoPatronum} />
                     </Switch>
-            <Footer />
         </Router>
     );
 }

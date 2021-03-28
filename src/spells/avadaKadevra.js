@@ -1,7 +1,5 @@
 import * as PIXI from "pixi.js";
 
-class App {
-    constructor() {
         const app = new PIXI.Application({ _backgroundColorRgba: (27, 27, 27) });
         document.body.appendChild(app.view);
 
@@ -81,9 +79,3 @@ class App {
             const t3 = t * t2;
             return (2 * t3 - 3 * t2 + 1) * p[0] + (t3 - 2 * t2 + t) * m[0] + (-2 * t3 + 3 * t2) * p[1] + (t3 - t2) * m[1];
         }
-
-    }
-}
-window.onload = () => {
-    new App();
-}

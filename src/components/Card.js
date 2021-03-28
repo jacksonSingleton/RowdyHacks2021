@@ -1,12 +1,31 @@
-import React, {Component} from "react";
-import img1 from "../assets/wizardLogo.svg";
-import '../styles/card-style.css'
+import React from "react";
+import {
+    CardWrapper,
+    CardHeader,
+    CardHeading,
+    CardBody,
+    CardIcon,
+    CardFieldset,
+    CardInput,
+    CardOptionsItem,
+    CardOptions,
+    CardOptionsNote,
+    CardButton,
+    CardLink
+} from "../styles/card-style";
 
 const Card = () => {
     return (
-        <div className='card text-center'>
-            <h1>Hello</h1>
-        </div>
+        <CardWrapper>
+            <CardHeader>
+                <CardHeading>Wingardium Leviosa</CardHeading>
+            </CardHeader>
+
+            <CardIcon>
+
+
+            </CardIcon>
+        </CardWrapper>
     );
 }
 export default Card;
