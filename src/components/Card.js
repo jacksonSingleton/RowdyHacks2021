@@ -21,12 +21,10 @@ const Card = () => {
                 <CardHeading>Wingardium Leviosa</CardHeading>
             </CardHeader>
 
-            <CardBody>
-                <CardFieldset>
-                    <CardInput placeholder="Username" type="text" required />
-                </CardFieldset>
+            <CardIcon>
 
-            </CardBody>
+
+            </CardIcon>
         </CardWrapper>
     );
 }
