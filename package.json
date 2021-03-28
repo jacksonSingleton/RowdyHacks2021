@@ -9,7 +9,7 @@
     "docker-start": "webpack serve --mode development --env development --host 0.0.0.0 --open --hot",
     "build": "npx webpack --config webpack.config.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
