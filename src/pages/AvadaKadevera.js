@@ -1,6 +1,6 @@
 import React from 'react';
 import * as PIXI from "pixi.js";
-let ret = true;
+
 
 function play() {
 
@@ -15,6 +15,7 @@ let historySize = 0;
 // ropeSize determines how smooth the trail will be.
 let ropeSize = 10;
 let points = [];
+app.loader.add('room', '/src/assets/lumosBG.png');
 
 function setup() {
 // Get the texture for rope.
@@ -129,9 +130,9 @@ function listenToUser(phrase){
         confidence = event.results[0][0].confidence;
         console.log(transcript);
 
-        if (('Avada Kadavra' === transcript) == true) {
+        if (('Avada Kedavra' === transcript) == true) {
             button.destroy();
-            setup();
+            app.loader.load(setup);
             console.log("video played");
         }
     };
@@ -139,7 +140,7 @@ function listenToUser(phrase){
     // start recognition
     recognition.start();
 
-    ret = false;
+    
 }
 
 const button = new PIXI.Graphics()
