@@ -1,14 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, {Component} from "react";
+import img1 from "../assets/wizardLogo.svg";
+import '../styles/card-style.css'
 
-export default class Card extends React.Component{
-    render(){
-        return(
-                <div className="card">
-                    <img src={`${this.props.imageURL}`}></img>
-                    <h1>{this.props.spell}</h1>
-                    <p>{this.props.description}</p>
-                </div>
-        )
-    }
+const Card = () => {
+    return (
+        <div className='card text-center'>
+            <h1>Hello</h1>
+        </div>
+    );
 }
+export default Card;

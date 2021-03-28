@@ -1,13 +1,18 @@
-//ENTRYPOINT FOR THE PPROGRAM THAT WILL BE BUNDLED INTO OUR MAIN WEBPAGE
+// This is our React default stuff
 import React from "react";
 import ReactDOM from "react-dom";
-import Homepage from "./Homepage";
-import "./styles/style.css";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+// We need this to load the app from app.js
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<Homepage />, document.getElementById('root'));
+// Let's render this
+ReactDOM.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+);
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
