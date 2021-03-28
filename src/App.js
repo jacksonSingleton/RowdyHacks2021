@@ -1,6 +1,6 @@
 //ENTRYPOINT FOR THE PROGRAM THAT WILL BE BUNDLED INTO OUR MAIN WEBPAGE
 import React from "react";
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, withRouter} from "react-router-dom";
 import process from "process";
 // Pages
 import Homepage from "./pages/Homepage";
@@ -34,4 +34,4 @@ function App() {
     );
 }
 
-export default App;
+export default withRouter(App);
