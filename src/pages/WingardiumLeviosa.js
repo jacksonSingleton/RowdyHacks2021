@@ -12,6 +12,9 @@ function play() {
 const app = new PIXI.Application({ backgroundColor: 0x1B1B1B, width: 1280, height: 720});
 
 
+app.loader.add('room', '/src/assets/lumosBG.png');
+
+
 // Options for how objects interact
 // How fast the red square moves
 let movementSpeed = 0;
@@ -24,11 +27,12 @@ let movementSpeed = 0;
 // shoves objects apart
 // Listen for animate update
 
-const redSquare = new PIXI.Sprite(PIXI.Texture.WHITE);
-redSquare.position.set(640, 620);
-redSquare.width = 100;
-redSquare.height = 100;
-redSquare.tint = '0xFF0000';
+let crateTexture = PIXI.Texture.from('../assets/crateTexture.png')
+const redSquare = new PIXI.Sprite(crateTexture);
+redSquare.width = 256;
+redSquare.height = 256;
+redSquare.position.set(920, 480);
+//redSquare.tint = '0xFF0000';
 redSquare.acceleration = new PIXI.Point(0);
 redSquare.mass = 1; 
 
@@ -87,8 +91,15 @@ app.ticker.add((delta) => {
 });
 
 // Add to stage
-app.stage.addChild(redSquare);
 
+function setup(loader, resources){
+    const background = new PIXI.Sprite(resources.room.texture);
+    app.stage.addChild(background);
+    app.stage.addChild(redSquare);
+    background.width = app.screen.width;
+    background.height = app.screen.height;
+}
+app.loader.load(setup);
 
 const WingardiumLeviosa = () => {
     return (
