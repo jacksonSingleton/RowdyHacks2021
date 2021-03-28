@@ -16,7 +16,16 @@ let historySize = 0;
 let ropeSize = 10;
 let points = [];
 app.loader.add('room', '/src/assets/lumosBG.png');
+app.loader.load(setupOne);
+function setupOne(loader, resources) {
+    const background = new PIXI.Sprite(resources.room.texture);
+    app.stage.addChild(background);
+    background.width = app.screen.width;
+    background.height = app.screen.height;
 
+    app.stage.interactive = true;
+
+}
 function setup() {
 // Get the texture for rope.
     const trailTexture = PIXI.Texture.from('assets/laserParticle.png');
