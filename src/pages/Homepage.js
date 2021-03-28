@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import Card from '../components/Card'
 function play() {
-    
+
     var audio = new Audio('../assets/title.wav');
     audio.play();
   }
@@ -25,7 +25,7 @@ const Wrapper = styled.section`
 const Home = () => {
     return (
         <Wrapper>
-            <Card />
+
         </Wrapper>
     );
 };

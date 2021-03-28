@@ -29,7 +29,6 @@ function App() {
                         <Route path="/wingardiumleviosa" component={WingardiumLeviosa} />
                         <Route path="/expectopatronum" component={ExpectoPatronum} />
                     </Switch>
-            <Footer />
         </Router>
     );
 }
