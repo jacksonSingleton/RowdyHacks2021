@@ -142,6 +142,7 @@ function listenToUser(phrase){
         if (('Avada Kedavra' === transcript) == true) {
             button.destroy();
             app.loader.load(setup);
+            play();
             console.log("video played");
         }
     };

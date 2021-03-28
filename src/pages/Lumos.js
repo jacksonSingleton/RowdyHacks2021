@@ -95,10 +95,12 @@ function listenToUser(phrase){
         
         if (('lumos' === transcript) == true) {
             update(100);
+            play();
             console.log("video played");
         }
         if (('Knox' === transcript) == true) {
             app.stage.removeChild(focus);
+            play();
             update(0);
             app.loader.load(setupOne);
             console.log("video played");
