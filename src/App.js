@@ -21,13 +21,13 @@ function App() {
         <Router>
                 <Navigation />
                     <Switch>
-                        <Route path="/" exact component={Homepage} />
-                        <Route path="/avadakadevera" component={AvadaKadevera} />
-                        <Route path="/incindio" component={Incindio} />
-                        <Route path="/lumos" component={Lumos} />
-                        <Route path="/sandbox" component={Sandbox} />
-                        <Route path="/wingardiumleviosa" component={WingardiumLeviosa} />
-                        <Route path="/expectopatronum" component={ExpectoPatronum} />
+                        <Route path={process.env.PUBLIC_URL + '/'} exact component={Homepage} />
+                        <Route path={process.env.PUBLIC_URL + "/avadakadevera"} component={AvadaKadevera} />
+                        <Route path={process.env.PUBLIC_URL + "/incindio"} component={Incindio} />
+                        <Route path={process.env.PUBLIC_URL + "/lumos"} component={Lumos} />
+                        <Route path={process.env.PUBLIC_URL + "/sandbox"} component={Sandbox} />
+                        <Route path={process.env.PUBLIC_URL + "/wingardiumleviosa"} component={WingardiumLeviosa} />
+                        <Route path={process.env.PUBLIC_URL + "/expectopatronum"} component={ExpectoPatronum} />
                     </Switch>
         </Router>
     );
