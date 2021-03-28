@@ -2,10 +2,15 @@ import React from 'react';
 import * as PIXI from "pixi.js";
 require("../spells/Particle.js");
 
-
 const app = new PIXI.Application({
     backgroundAlpha: false
 });
+
+function play() {
+
+	var audio = new Audio('../assets/PatronusSound.wav');
+	audio.play();
+}
 
 function main() {
 	document.body.appendChild(app.view);
@@ -96,6 +101,7 @@ function listenToUser(phrase){
 
         if (('incendio' === transcript || 'insidio' === transcript)) {
 			button.destroy();
+			play();
 			app.loader.load(main);
             console.log("video played");
         }
@@ -105,6 +111,7 @@ function listenToUser(phrase){
     recognition.start();
 
 }
+
 // This is our button
 const button = new PIXI.Graphics()
     .beginFill(0x0, 0.5)

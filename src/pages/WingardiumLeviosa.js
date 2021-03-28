@@ -136,6 +136,7 @@ function listenToUser(phrase){
         if (('Wingardium Leviosa' === transcript) == true) {
             movementSpeed = 0.09;
             console.log("video played");
+            play();
             button.destroy();
         }
     };

@@ -1,10 +1,10 @@
 import React from 'react';
 import * as PIXI from "pixi.js";
 function play() {
-    
+
     var audio = new Audio('../assets/nice.wav');
     audio.play();
-  }
+}
 
 const app = new PIXI.Application({width: 1280, height: 720});
 
@@ -46,7 +46,7 @@ function setup(loader, resources) {
     const texture = app.renderer.generateTexture(circle, PIXI.SCALE_MODES.NEAREST, 1, bounds);
     const focus = new PIXI.Sprite(texture);
 
-    
+
     app.stage.addChild(focus);
     background.mask = focus;
 
@@ -92,13 +92,16 @@ function listenToUser(phrase){
         transcript = event.results[0][0].transcript;
         confidence = event.results[0][0].confidence;
         console.log(transcript);
-        
+
         if (('lumos' === transcript) == true) {
+            play();
             update(100);
             console.log("video played");
         }
         if (('Knox' === transcript) == true) {
+            play();
             app.stage.removeChild(focus);
+            play();
             update(0);
             app.loader.load(setupOne);
             console.log("video played");
@@ -107,8 +110,8 @@ function listenToUser(phrase){
 
     // start recognition
     recognition.start();
-     
-    
+
+
 }
 
 const button = new PIXI.Graphics()
