@@ -96,7 +96,6 @@ function listenToUser(phrase){
         if (('lumos' === transcript) == true) {
             play();
             update(100);
-            play();
             console.log("video played");
         }
         if (('Knox' === transcript) == true) {

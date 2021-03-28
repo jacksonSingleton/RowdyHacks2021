@@ -2,11 +2,6 @@ import React from 'react';
 import * as PIXI from "pixi.js";
 require("../spells/Particle.js");
 
-function play() {
-
-    var audio = new Audio('../assets/complete.wav');
-    audio.play();
-}
 const app = new PIXI.Application({
     backgroundAlpha: false
 });
@@ -108,7 +103,6 @@ function listenToUser(phrase){
 			button.destroy();
 			play();
 			app.loader.load(main);
-            play()
             console.log("video played");
         }
     };
