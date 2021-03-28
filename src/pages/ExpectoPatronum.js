@@ -1,6 +1,43 @@
 import React from 'react';
 import * as PIXI from "pixi.js";
-import "../components/VoiceRec.js";
+var ret = false;
+
+function listenToUser(phrase){
+    var transcript = "";
+    var confidence = "";
+    // New speech recognition object
+    var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+    var recognition = new SpeechRecognition();
+    //recognition.continuous = true;
+
+    // This runs when the speech recognition service starts
+    recognition.onstart = function() {
+        console.log("Voice Recognition listening. Speak into the microphone.");
+    };
+
+    recognition.onspeechend = function() {
+        // Stop when user is done speaking
+        recognition.stop();
+    }
+
+    // This runs when the speech recognition service returns result
+    recognition.onresult = function(event) {
+        transcript = event.results[0][0].transcript;
+        confidence = event.results[0][0].confidence;
+        console.log(transcript);
+        
+        if (('expecto patronum' === transcript) == true) {
+            onPlayVideo();
+            console.log("video played");
+        }
+    };
+
+    // start recognition
+    recognition.start();
+     
+    ret = false;
+}
+
 
 const app = new PIXI.Application({ backgroundAlpha: true });
 app.loader.add('room', '/src/assets/lumosBG.png');
@@ -25,7 +62,7 @@ const button = new PIXI.Graphics()
     .drawRoundedRect(0, 0, 100, 100, 10)
     .endFill()
     .beginFill(0xffffff)
-    .moveTo(100, 30)
+    .moveTo(36, 30)
     .lineTo(36, 70)
     .lineTo(70, 50);
 
@@ -47,7 +84,10 @@ app.stage.addChild(button);
 // ios10 and above require a click/tap event to render videos
 // that contain audio in PIXI. Videos with no audio track do
 // not have this requirement
-button.on('pointertap', onPlayVideo);
+button.on('pointertap', listenToUser);
+
+ 
+    
 
 function onPlayVideo() {
     // Don't need the button anymore

@@ -15,6 +15,7 @@ import Footer from "./components/footer";
 // Styling
 import './styles/index.css';
 
+
 function App() {
     return (
         <Router>
