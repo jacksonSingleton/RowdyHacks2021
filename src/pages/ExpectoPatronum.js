@@ -65,7 +65,6 @@ function onPlayVideo() {
 
     app.stage.addChild(videoSprite);
 
-    
 }
 
 const ExpectoPatronum = () => {

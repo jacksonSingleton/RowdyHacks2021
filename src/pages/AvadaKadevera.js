@@ -1,6 +1,12 @@
 import React from 'react';
 import * as PIXI from "pixi.js";
 
+function play() {
+    
+    var audio = new Audio('../assets/complete.wav');
+    audio.play();
+  }
+
 const app = new PIXI.Application({ _backgroundColorRgba: (27, 27, 27) });
 
 

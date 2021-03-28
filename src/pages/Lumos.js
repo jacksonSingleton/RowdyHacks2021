@@ -1,6 +1,10 @@
 import React from 'react';
 import * as PIXI from "pixi.js";
-
+function play() {
+    
+    var audio = new Audio('../assets/nice.wav');
+    audio.play();
+  }
 
 const app = new PIXI.Application({width: 1280, height: 720});
 

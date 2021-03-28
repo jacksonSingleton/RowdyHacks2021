@@ -1,5 +1,12 @@
 import React from 'react';
 import * as PIXI from "pixi.js";
+
+function play() {
+    
+    var audio = new Audio('../assets/nice.wav');
+    audio.play();
+  }
+
 // Based somewhat on this article by Spicy Yoghurt
 // URL for further reading: https://spicyyoghurt.com/tutorials/html5-javascript-game-development/collision-detection-physics
 const app = new PIXI.Application({ backgroundColor: 0x1B1B1B });
