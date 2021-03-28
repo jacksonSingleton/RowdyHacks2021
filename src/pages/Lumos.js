@@ -41,13 +41,9 @@ function setup(loader, resources) {
     }
 }
 
-
 const Lumos = () => {
     return (
-        <div>
-            <h1>Hello</h1>
-        </div>
-        //document.body.appendChild(app.view)
+        document.body.appendChild(app.view)
     );
 };
 
