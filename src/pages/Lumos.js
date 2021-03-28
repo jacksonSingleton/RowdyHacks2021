@@ -10,7 +10,7 @@ const app = new PIXI.Application({width: 1280, height: 720});
 
 
 // Inner radius of the circle
-const radius = 100;
+var radius = 0;
 
 // The blur amount
 const blurSize = 56;
@@ -34,6 +34,7 @@ function setup(loader, resources) {
     const texture = app.renderer.generateTexture(circle, PIXI.SCALE_MODES.NEAREST, 1, bounds);
     const focus = new PIXI.Sprite(texture);
 
+    
     app.stage.addChild(focus);
     background.mask = focus;
 
@@ -44,7 +45,10 @@ function setup(loader, resources) {
         focus.position.y = event.data.global.y - focus.height / 2;
     }
 }
-
+function update(rad){
+    radius = rad;
+    app.loader.load(setup);
+}
 const Lumos = () => {
     return (
         document.body.appendChild(app.view)
@@ -78,11 +82,13 @@ function listenToUser(phrase){
         console.log(transcript);
         
         if (('lumos' === transcript) == true) {
-            onPlayVideo();
+            update(100);
             console.log("video played");
         }
         if (('Knox' === transcript) == true) {
-            onPlayVideo();
+            app.stage.removeChild(focus);
+            update(0);
+            
             console.log("video played");
         }
     };
@@ -90,7 +96,7 @@ function listenToUser(phrase){
     // start recognition
     recognition.start();
      
-    ret = false;
+    
 }
 
 const button = new PIXI.Graphics()

@@ -226,7 +226,7 @@ function listenToUser(phrase){
     // start recognition
     recognition.start();
      
-    ret = false;
+    
 }
 
 const button = new PIXI.Graphics()
