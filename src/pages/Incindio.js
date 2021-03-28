@@ -94,7 +94,7 @@ function listenToUser(phrase){
         confidence = event.results[0][0].confidence;
         console.log(transcript);
 
-        if (('incendio' === transcript) == true) {
+        if (('incendio' === transcript || 'insidio' === transcript)) {
 			button.destroy();
 			app.loader.load(main);
             console.log("video played");

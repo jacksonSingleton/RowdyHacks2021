@@ -97,7 +97,7 @@ import * as particles from "pixi-particles"
                 urls = imagePaths.slice();
                 makeTextures = true;
             }
-            urls.push('images/bg.png');
+            urls.push('../assets/lumosBG.png');
             const loader = PIXI.Loader.shared;
             for (let i = 0; i < urls.length; ++i)
             {
@@ -105,7 +105,7 @@ import * as particles from "pixi-particles"
             }
             loader.load(() =>
             {
-                this.bg = new PIXI.Sprite(PIXI.Texture.from('images/bg.png'));
+                this.bg = new PIXI.Sprite(PIXI.Texture.from('../assets/lumosBG.png'));
                 // bg is a 1px by 1px image
                 this.bg.scale.x = canvas.width;
                 this.bg.scale.y = canvas.height;
