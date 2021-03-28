@@ -11,7 +11,7 @@ Aaron Perez
 Noor Alaskari
 
 ### Implementation
-Using `npm start`, we're hosting a javascript reactjs/PIXIjs web application.
+Using `npm install` and then `npm start`, we're locally hosting a javascript reactjs/PIXIjs web application.
 We use webkit API to detect the user's speech and determines the words used.
 The WebApp then verifies the spoken words with the corressponding spell list and enacts a spell effect if there is a match.
 
@@ -31,6 +31,8 @@ The User is then brought into a sandbox area to play around with the provided sp
 
 ## Cool features
 Custom music made by Leon!
+
+Custom video made by Leon!
 
 Custom backgrounds made by Jackson!
 
