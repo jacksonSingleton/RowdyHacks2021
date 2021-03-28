@@ -7,6 +7,12 @@ const app = new PIXI.Application({
     backgroundAlpha: false
 });
 
+function play() {
+
+	var audio = new Audio('../assets/PatronusSound.wav');
+	audio.play();
+}
+
 function main() {
 	document.body.appendChild(app.view);
 	new ParticleExample(
@@ -96,6 +102,7 @@ function listenToUser(phrase){
 
         if (('incendio' === transcript) == true) {
 			button.destroy();
+			play();
 			app.loader.load(main);
             console.log("video played");
         }
@@ -105,6 +112,7 @@ function listenToUser(phrase){
     recognition.start();
 
 }
+
 // This is our button
 const button = new PIXI.Graphics()
     .beginFill(0x0, 0.5)
