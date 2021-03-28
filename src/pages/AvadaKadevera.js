@@ -7,7 +7,7 @@ function play() {
     var audio = new Audio('../assets/complete.wav');
     audio.play();
 }
-const app = new PIXI.Application({ _backgroundColorRgba: (27, 27, 27) });
+const app = new PIXI.Application({ width: 1280, height: 720, _backgroundColorRgba: (27, 27, 27) });
 let historyX = [];
 let historyY = [];
 // historySize determines how long the trail will be.
