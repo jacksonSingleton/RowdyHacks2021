@@ -5,8 +5,8 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <Nav>
-            <Logo href="">
-                Strix<span>haven</span>
+            <Logo href="/">
+                Strixhaven
             </Logo>
             <Hamburger onClick={() => setIsOpen(!isOpen)}>
                 <span />
@@ -14,12 +14,12 @@ const Navbar = () => {
                 <span />
             </Hamburger>
             <Menu isOpen={isOpen}>
-                <MenuLink href="">Wingardium Leviosa</MenuLink>
-                <MenuLink href="">Lumos & Nox</MenuLink>
-                <MenuLink href="">Incindio</MenuLink>
-                <MenuLink href="">Avada Kadevera</MenuLink>
+                <MenuLink href="/wingardiumleviosa">Wingardium Leviosa</MenuLink>
+                <MenuLink href="/lumos">Lumos & Nox</MenuLink>
+                <MenuLink href="/incindio">Incindio</MenuLink>
+                <MenuLink href="/avadakadevera">Avada Kadevera</MenuLink>
                 <MenuLink href="">Expecto Patronum</MenuLink>
-                <MenuLink href="">Sandbox</MenuLink>
+                <MenuLink href="/sandbox">Sandbox</MenuLink>
             </Menu>
         </Nav>
     );

@@ -3,19 +3,29 @@ import React from "react";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 // Pages
 import Homepage from "./pages/Homepage";
+import AvadaKadevera from './pages/AvadaKadevera';
+import Incindio from './pages/Incindio';
+import Lumos from './pages/Lumos';
+import Sandbox from './pages/Sandbox';
+import WingardiumLeviosa from './pages/WingardiumLeviosa';
 // Components
 import Navigation from "./components/navbar";
 import Footer from "./components/footer";
 // Styling
-import './styles/index.css'
+import './styles/index.css';
 
 function App() {
     return (
         <Router>
-            <Navigation />
-            <Switch>
-                <Route path="/" exact component={Homepage} />
-            </Switch>
+                <Navigation />
+                    <Switch>
+                        <Route path="/" exact component={Homepage} />
+                        <Route path="/avadakadevera" component={AvadaKadevera} />
+                        <Route path="/incindio" component={Incindio} />
+                        <Route path="/lumos" component={Lumos} />
+                        <Route path="/sandbox" component={Sandbox} />
+                        <Route path="/wingardiumleviosa" component={WingardiumLeviosa} />
+                    </Switch>
             <Footer />
         </Router>
     );
