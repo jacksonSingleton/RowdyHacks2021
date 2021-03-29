@@ -19,7 +19,7 @@ import './styles/index.css';
 
 function App() {
     return (
-        <Router>
+        <Router basename="RowdyHacks2021">
                 <Navigation />
                     <Switch>
                         <Route path='/' exact component={Homepage} />
